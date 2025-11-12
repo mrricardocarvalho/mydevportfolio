@@ -14,7 +14,7 @@ export default function Hero() {
       </div>
 
       <p className="hero-story">
-        I provide comprehensive support for Dynamics Business Central, ensuring customer success through technical expertise, debugging, and scalable integrations.
+        I turn Business Central challenges into opportunities-delivering reliable support, innovative integrations, and scalable solutions that drive business success and growth.
       </p>
 
       <div className="hero-cta-row">

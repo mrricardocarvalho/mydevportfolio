@@ -33,11 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="shell">
-          <div className="ambient-orb orb-1"></div>
-          <div className="ambient-orb orb-2"></div>
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );

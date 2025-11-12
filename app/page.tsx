@@ -9,9 +9,11 @@ import ExperiencePanel from '../components/ExperiencePanel';
 import ProjectsPanel from '../components/ProjectsPanel';
 import EducationPanel from '../components/EducationPanel';
 import BlogPanel from '../components/BlogPanel';
+import Modal from '../components/Modal';
 
 export default function Home() {
   const [activePanel, setActivePanel] = useState('panel-contact');
+  const [showExpModal, setShowExpModal] = useState(false);
 
   return (
     <div className="shell">
@@ -46,7 +48,7 @@ export default function Home() {
         <main className="right-panels">
           <ContactPanel isActive={activePanel === 'panel-contact'} />
           <SkillsPanel isActive={activePanel === 'panel-skills'} />
-          <ExperiencePanel isActive={activePanel === 'panel-experience'} />
+          <ExperiencePanel isActive={activePanel === 'panel-experience'} onOpenModal={() => setShowExpModal(true)} />
           <ProjectsPanel isActive={activePanel === 'panel-projects'} />
           <EducationPanel isActive={activePanel === 'panel-education'} />
           <BlogPanel isActive={activePanel === 'panel-blog'} />
@@ -76,6 +78,25 @@ export default function Home() {
           </a>
         </div>
       </footer>
+
+      <Modal isOpen={showExpModal} onClose={() => setShowExpModal(false)} title="Detailed Responsibilities">
+        <div>
+          <div className="modal-section-title">Current Role at Xolyd</div>
+          <ul className="modal-list">
+            <li>Ongoing customer support for Business Central implementations.</li>
+            <li>New project implementations and system upgrades.</li>
+            <li>Developing multiple interfaces for integrations.</li>
+            <li>Managing cloud-based and legacy version customers.</li>
+          </ul>
+        </div>
+        <div>
+          <div className="modal-section-title">Key Projects</div>
+          <ul className="modal-list">
+            <li>BC Cloud addon for ERP4LSP logistics platform.</li>
+            <li>Leading development of BC integration with Portuguese SIBS banking.</li>
+          </ul>
+        </div>
+      </Modal>
     </div>
   );
 }

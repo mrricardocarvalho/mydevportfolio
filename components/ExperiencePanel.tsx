@@ -1,8 +1,9 @@
 interface ExperiencePanelProps {
   isActive: boolean;
+  onOpenModal: () => void;
 }
 
-export default function ExperiencePanel({ isActive }: ExperiencePanelProps) {
+export default function ExperiencePanel({ isActive, onOpenModal }: ExperiencePanelProps) {
   return (
     <section className={`panel ${isActive ? 'active' : ''}`} id="panel-experience">
       <div className="panel-header">
@@ -32,7 +33,7 @@ export default function ExperiencePanel({ isActive }: ExperiencePanelProps) {
           <p>
             Provide ongoing support, new implementations, interfaces, and upgrades for cloud-based and legacy Business Central customers. Developed addon for BC Cloud ERP4LSP and leading integration with Portuguese SIBS.
           </p>
-          <div className="link-soft" data-open-modal="exp-modal">
+          <div className="link-soft" onClick={onOpenModal}>
             <i className="fa-regular fa-eye"></i>
             See detailed responsibilities
           </div>

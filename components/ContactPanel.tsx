@@ -48,7 +48,7 @@ export default function ContactPanel({ isActive }: ContactPanelProps) {
           <div>
             <strong>Role Focus</strong>
             <div className="meta">
-              Dynamics Business Central Support Engineer · Solution Architect · ERP Modernization & Integration Specialist
+              Senior Business Central Developer · ERP Consultant · Integration & Support Specialist
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function ContactPanel({ isActive }: ContactPanelProps) {
           <div>
             <strong>Value in One Line</strong>
             <div className="meta">
-              I ensure customer success in Business Central through expert support, debugging, and reliable ERP implementations.
+              I deliver seamless Business Central solutions that optimize operations, resolve challenges, and drive sustainable business growth.
             </div>
           </div>
         </div>
