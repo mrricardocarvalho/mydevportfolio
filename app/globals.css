@@ -766,6 +766,10 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.modal-backdrop.open {
+  display: flex;
+}
+
 .modal {
   width: min(880px, 94vw);
   max-height: 86vh;
