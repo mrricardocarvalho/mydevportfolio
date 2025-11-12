@@ -220,6 +220,16 @@ body {
   .content {
     grid-template-columns: 1fr;
   }
+  .panel {
+    padding: 14px 12px 10px;
+    font-size: 14px;
+  }
+  .hero-card {
+    padding: 14px 12px 12px;
+  }
+  .left-rail {
+    gap: 10px;
+  }
 }
 
 /* Left rail */
