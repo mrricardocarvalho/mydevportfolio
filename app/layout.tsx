@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// SEO defaults are provided via Next.js Metadata API below
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ricardo Carvalho | Senior Business Central Developer",
   description: "Ricardo Carvalho - Senior Business Central Developer at Xolyd. Extensive experience in ERP support, implementations, interfaces, upgrades, and cloud solutions.",
+  metadataBase: new URL('https://your-domain.com'),
+  openGraph: {
+    title: 'Ricardo Carvalho | Senior Business Central Developer',
+    description:
+      'Ricardo Carvalho - Senior Business Central Developer at Xolyd. Extensive experience in ERP support, implementations, interfaces, upgrades, and cloud solutions.',
+    url: 'https://your-domain.com',
+    siteName: 'Ricardo Carvalho',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -33,6 +44,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/** metadata is applied via Next.js Metadata API; no client-side default SEO component required */}
         {children}
       </body>
     </html>
