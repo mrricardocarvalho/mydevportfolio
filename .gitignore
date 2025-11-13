@@ -42,3 +42,7 @@ next-env.d.ts
 
 # Playwright test artifacts
 .playwright-mcp/
+
+# Editor and workflow configs
+.vscode/
+.github/
