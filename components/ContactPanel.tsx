@@ -1,8 +1,10 @@
 interface ContactPanelProps {
   isActive: boolean;
+  onBook?: () => void;
+  onDownloadCV?: () => void;
 }
 
-export default function ContactPanel({ isActive }: ContactPanelProps) {
+export default function ContactPanel({ isActive, onBook, onDownloadCV }: ContactPanelProps) {
   return (
     <section className={`panel ${isActive ? 'active' : ''}`} id="panel-contact">
       <div className="panel-header">
@@ -28,7 +30,7 @@ export default function ContactPanel({ isActive }: ContactPanelProps) {
           <div>
             <strong>Location</strong>
             <div className="meta">
-              Lisbon / Porto · Portugal · Remote-friendly
+              Lisbon · Portugal · Remote-friendly
             </div>
           </div>
           <span className="meta">CET / GMT</span>
@@ -63,10 +65,10 @@ export default function ContactPanel({ isActive }: ContactPanelProps) {
       </div>
 
       <div className="panel-actions">
-        <div className="micro-link" id="micro-book">
+        <div className="micro-link" id="micro-book" role="button" tabIndex={0} onClick={() => { if (onBook) onBook(); }} onKeyDown={(e) => { if (e.key === 'Enter' && onBook) onBook(); }}>
           Book a 20-min technical-fit call
         </div>
-        <div className="micro-link" id="micro-cv">
+        <div className="micro-link" id="micro-cv" role="button" tabIndex={0} onClick={() => { if (onDownloadCV) onDownloadCV(); }} onKeyDown={(e) => { if (e.key === 'Enter' && onDownloadCV) onDownloadCV(); }}>
           Download detailed CV PDF
         </div>
       </div>
