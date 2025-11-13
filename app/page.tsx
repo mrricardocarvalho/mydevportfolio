@@ -49,7 +49,7 @@ export default function Home() {
           <span>Business Central · ERP Support</span>
         </div>
         <div className="cta-inline">
-          Let’s build what your finance and operations deserve.
+          Let's build the financial and operational systems your business deserves.
           <a href="mailto:ricardo.sampaio@gmail.com?subject=Business%20Central%20Opportunity%20with%20Ricardo">
             <i className="fa-regular fa-paper-plane"></i>
             <span>Invite Ricardo</span>
