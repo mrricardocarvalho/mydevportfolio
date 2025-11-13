@@ -22,7 +22,7 @@ export default function EducationPanel({ isActive }: EducationPanelProps) {
           <div>
             <strong>Bachelor's in Management Informatics</strong>
             <div className="meta">
-              Instituto Superior de Gestão (ISG), Lisbon, Portugal. Courses in C/C++, Visual Basic, Java, SQL, PL/SQL, HTML, XML, UML, ASP, Prolog, Clips, Databases, Data Mining, Systems Analysis, Object-Oriented Programming, Network Engineering, Computer Law, Management, Accounting, Financial Analysis, Mathematics, Strategic Planning, Business Strategy.
+              ISG, Lisbon. Programming (C/C++, Java, SQL), Databases, Systems Analysis, OOP, Management, Accounting, Business Strategy.
             </div>
           </div>
           <span className="meta">1998–2004</span>
@@ -32,7 +32,7 @@ export default function EducationPanel({ isActive }: EducationPanelProps) {
           <div>
             <strong>Professional Certifications & Trainings</strong>
             <div className="meta">
-              MB7-838 NAV 2009 Installation and Configuration (2011), Pedagogical Competencies for Trainers (2008), ASP.NET MVC 4 Web Applications (2015), JavaScript (2015), Microsoft Visual Studio 2010 ASP.NET (2009–2012).
+              MB7-838 NAV 2009 Installation and Configuration (2011), ASP.NET MVC 4 Web Applications (2015), JavaScript (2015).
             </div>
           </div>
         </div>

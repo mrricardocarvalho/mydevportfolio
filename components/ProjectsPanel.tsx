@@ -1,8 +1,9 @@
 interface ProjectsPanelProps {
   isActive: boolean;
+  onOpenModal: () => void;
 }
 
-export default function ProjectsPanel({ isActive }: ProjectsPanelProps) {
+export default function ProjectsPanel({ isActive, onOpenModal }: ProjectsPanelProps) {
   return (
     <section className={`panel ${isActive ? 'active' : ''}`} id="panel-projects">
       <div className="panel-header">
@@ -60,7 +61,7 @@ export default function ProjectsPanel({ isActive }: ProjectsPanelProps) {
       </div>
 
       <div className="panel-actions">
-        <div className="micro-link" data-open-modal="projects-modal">
+        <div className="micro-link" onClick={onOpenModal}>
           <i className="fa-regular fa-file-code"></i>
           Explore 5–7 detailed project stories
         </div>

@@ -1,8 +1,9 @@
 interface SkillsPanelProps {
   isActive: boolean;
+  onOpenModal: () => void;
 }
 
-export default function SkillsPanel({ isActive }: SkillsPanelProps) {
+export default function SkillsPanel({ isActive, onOpenModal }: SkillsPanelProps) {
   return (
     <section className={`panel ${isActive ? 'active' : ''}`} id="panel-skills">
       <div className="panel-header">
@@ -58,7 +59,7 @@ export default function SkillsPanel({ isActive }: SkillsPanelProps) {
       </div>
 
       <div className="panel-actions">
-        <div className="micro-link" data-open-modal="skills-modal">
+        <div className="micro-link" onClick={onOpenModal}>
           <i className="fa-solid fa-magnifying-glass"></i>
           View a categorized skill matrix
         </div>
